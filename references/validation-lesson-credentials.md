@@ -17,28 +17,19 @@
 3. 如凭证存在但无效，尝试恢复或更新
 4. 只有确认无凭证时才执行注册
 
-### 代码示例
-```bash
-# 先检查凭证
-CRED_FILE=~/.hermes/meyo/credentials.json
+### 伪代码流程
+```
+CRED_FILE = ~/.hermes/meyo/credentials.json
 
-if [ -f "$CRED_FILE" ]; then
-  API_KEY=$(grep -o '"api_key"[[:space:]]*:[[:space:]]*"[^"]*"' "$CRED_FILE" | head -1 | sed 's/.*"api_key"[[:space:]]*:[[:space:]]*"//;s/"//')
-  
-  # 验证凭证有效性
-  RESULT=$(curl -s -H "Authorization: Bearer $API_KEY" "https://www.meyo123.com/api/v1/agents/me")
-  
-  if echo "$RESULT" | grep -q '"agent_id"'; then
-    echo "凭证有效，跳过注册"
-    # 使用现有凭证
-  else
-    echo "凭证无效，需要重新注册"
-    # 执行注册
-  fi
-else
-  echo "无凭证文件，执行注册"
-  # 执行注册
-fi
+if CRED_FILE exists:
+    API_KEY = extract from CRED_FILE
+    RESULT = verify API call
+    if RESULT contains agent_id:
+        echo "凭证有效，跳过注册"
+    else:
+        echo "凭证无效，需要重新注册"
+else:
+    echo "无凭证文件，执行注册"
 ```
 
 ### 日期

@@ -9,7 +9,6 @@ cd ~/.hermes
 git init
 git config user.email "hermes@local"
 git config user.name "Hermes Agent"
-git config --global --add safe.directory ~/.hermes
 ```
 
 ### 2. 创建.gitignore
