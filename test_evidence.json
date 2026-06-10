@@ -1,0 +1,661 @@
+{
+  "metadata": {
+    "created_at": "2026-05-21T08:02:05.046312",
+    "version": "1.0"
+  },
+  "trajectories": [
+    {
+      "trajectory_id": "τ_20260521_080205_session_",
+      "timestamp": "2026-05-21T08:02:05.046265",
+      "user_id": "user_001",
+      "session_id": "session_test123",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:02:05.046270",
+          "input": "帮我分析一下AI技能市场",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:02:05.046277",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill"
+          },
+          "output": {
+            "score": 85,
+            "grade": "B"
+          },
+          "success": true
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:02:05.046282",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能市场趋势"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        },
+        {
+          "step": 4,
+          "action": "error_encountered",
+          "timestamp": "2026-05-21T08:02:05.046285",
+          "error_type": "APIError",
+          "error_message": "端口配置错误",
+          "recovery_action": "重试",
+          "context": {
+            "api": "clawhub"
+          }
+        }
+      ],
+      "final_response": "分析完成，AI技能市场呈现增长趋势",
+      "success": true,
+      "metrics": {
+        "total_steps": 4,
+        "tool_calls": 1,
+        "errors": 1,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.775470",
+      "user_id": "user_0",
+      "session_id": "session_0",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.775475",
+          "input": "帮我分析AI技能0",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.775482",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-0"
+          },
+          "output": {
+            "score": 80
+          },
+          "success": false
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.775487",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能0"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        },
+        {
+          "step": 4,
+          "action": "error_encountered",
+          "timestamp": "2026-05-21T08:03:32.775492",
+          "error_type": "APIError",
+          "error_message": "端口配置错误 0",
+          "recovery_action": "重试",
+          "context": {}
+        }
+      ],
+      "final_response": "分析完成0",
+      "success": false,
+      "metrics": {
+        "total_steps": 4,
+        "tool_calls": 1,
+        "errors": 1,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.776014",
+      "user_id": "user_1",
+      "session_id": "session_1",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.776019",
+          "input": "帮我分析AI技能1",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.776028",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-1"
+          },
+          "output": {
+            "score": 82
+          },
+          "success": true
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.776035",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能1"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        }
+      ],
+      "final_response": "分析完成1",
+      "success": true,
+      "metrics": {
+        "total_steps": 3,
+        "tool_calls": 1,
+        "errors": 0,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.777327",
+      "user_id": "user_2",
+      "session_id": "session_2",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.777332",
+          "input": "帮我分析AI技能2",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.777340",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-0"
+          },
+          "output": {
+            "score": 84
+          },
+          "success": true
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.777346",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能2"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        }
+      ],
+      "final_response": "分析完成2",
+      "success": true,
+      "metrics": {
+        "total_steps": 3,
+        "tool_calls": 1,
+        "errors": 0,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.778611",
+      "user_id": "user_0",
+      "session_id": "session_3",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.778616",
+          "input": "帮我分析AI技能3",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.778624",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-1"
+          },
+          "output": {
+            "score": 86
+          },
+          "success": false
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.778630",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能3"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        },
+        {
+          "step": 4,
+          "action": "error_encountered",
+          "timestamp": "2026-05-21T08:03:32.778636",
+          "error_type": "APIError",
+          "error_message": "端口配置错误 3",
+          "recovery_action": "重试",
+          "context": {}
+        }
+      ],
+      "final_response": "分析完成3",
+      "success": false,
+      "metrics": {
+        "total_steps": 4,
+        "tool_calls": 1,
+        "errors": 1,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.779655",
+      "user_id": "user_1",
+      "session_id": "session_4",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.779659",
+          "input": "帮我分析AI技能4",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.779668",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-0"
+          },
+          "output": {
+            "score": 88
+          },
+          "success": true
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.779674",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能4"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        }
+      ],
+      "final_response": "分析完成4",
+      "success": true,
+      "metrics": {
+        "total_steps": 3,
+        "tool_calls": 1,
+        "errors": 0,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.781011",
+      "user_id": "user_2",
+      "session_id": "session_5",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.781016",
+          "input": "帮我分析AI技能5",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.781024",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-1"
+          },
+          "output": {
+            "score": 90
+          },
+          "success": true
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.781030",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能5"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        }
+      ],
+      "final_response": "分析完成5",
+      "success": true,
+      "metrics": {
+        "total_steps": 3,
+        "tool_calls": 1,
+        "errors": 0,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.782162",
+      "user_id": "user_0",
+      "session_id": "session_6",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.782167",
+          "input": "帮我分析AI技能6",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.782175",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-0"
+          },
+          "output": {
+            "score": 92
+          },
+          "success": false
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.782181",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能6"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        },
+        {
+          "step": 4,
+          "action": "error_encountered",
+          "timestamp": "2026-05-21T08:03:32.782185",
+          "error_type": "APIError",
+          "error_message": "端口配置错误 6",
+          "recovery_action": "重试",
+          "context": {}
+        }
+      ],
+      "final_response": "分析完成6",
+      "success": false,
+      "metrics": {
+        "total_steps": 4,
+        "tool_calls": 1,
+        "errors": 1,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.783379",
+      "user_id": "user_1",
+      "session_id": "session_7",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.783384",
+          "input": "帮我分析AI技能7",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.783392",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-1"
+          },
+          "output": {
+            "score": 94
+          },
+          "success": true
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.783398",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能7"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        }
+      ],
+      "final_response": "分析完成7",
+      "success": true,
+      "metrics": {
+        "total_steps": 3,
+        "tool_calls": 1,
+        "errors": 0,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.784791",
+      "user_id": "user_2",
+      "session_id": "session_8",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.784796",
+          "input": "帮我分析AI技能8",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.784805",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-0"
+          },
+          "output": {
+            "score": 96
+          },
+          "success": true
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.784812",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能8"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        }
+      ],
+      "final_response": "分析完成8",
+      "success": true,
+      "metrics": {
+        "total_steps": 3,
+        "tool_calls": 1,
+        "errors": 0,
+        "duration_ms": 0
+      }
+    },
+    {
+      "trajectory_id": "τ_20260521_080332_session_",
+      "timestamp": "2026-05-21T08:03:32.788214",
+      "user_id": "user_0",
+      "session_id": "session_9",
+      "skills_invoked": [
+        "darwin-skill"
+      ],
+      "causal_chain": [
+        {
+          "step": 1,
+          "action": "receive_prompt",
+          "timestamp": "2026-05-21T08:03:32.788220",
+          "input": "帮我分析AI技能9",
+          "output": "解析后的意图"
+        },
+        {
+          "step": 2,
+          "action": "invoke_skill",
+          "timestamp": "2026-05-21T08:03:32.788229",
+          "skill": "darwin-skill",
+          "input": {
+            "skill_name": "test-skill-1"
+          },
+          "output": {
+            "score": 98
+          },
+          "success": false
+        },
+        {
+          "step": 3,
+          "action": "tool_call",
+          "timestamp": "2026-05-21T08:03:32.788235",
+          "tool": "web_search",
+          "parameters": {
+            "query": "AI技能9"
+          },
+          "result": {
+            "results": [
+              "结果1",
+              "结果2"
+            ]
+          },
+          "success": true
+        },
+        {
+          "step": 4,
+          "action": "error_encountered",
+          "timestamp": "2026-05-21T08:03:32.788240",
+          "error_type": "APIError",
+          "error_message": "端口配置错误 9",
+          "recovery_action": "重试",
+          "context": {}
+        }
+      ],
+      "final_response": "分析完成9",
+      "success": false,
+      "metrics": {
+        "total_steps": 4,
+        "tool_calls": 1,
+        "errors": 1,
+        "duration_ms": 0
+      }
+    }
+  ]
+}

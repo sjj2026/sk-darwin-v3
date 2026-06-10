@@ -1,0 +1,22 @@
+{
+  "min_samples": 5,
+  "max_test_tasks": 10,
+  "accept_threshold": 0.8,
+  "enable_auto_deploy": false,
+  "notification_email": null,
+  "validation_settings": {
+    "environment": "linux_container",
+    "timeout_ms": 30000,
+    "retry_count": 3
+  },
+  "evolution_settings": {
+    "refine_threshold": 0.8,
+    "create_threshold": 3,
+    "skip_threshold": 0.95
+  },
+  "monotonicity_guarantee": {
+    "enabled": true,
+    "rollback_on_degradation": true,
+    "min_improvement": 0.01
+  }
+}
